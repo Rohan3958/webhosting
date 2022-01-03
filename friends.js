@@ -4,7 +4,7 @@ const fs= require('fs')
 const app = express()
 const port = process.env.port || 2525
 
-app.get("/friends",function(req,res){
+app.get("/",function(req,res){
     fs.readFile("fd.json",'utf8',function(err,data){
         console.log(data);
         res.send(data);
